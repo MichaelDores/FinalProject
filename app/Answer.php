@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Question extends Model
+class Answer extends Model
 {
     public function user()
     {
         return $this->belongsTo('App\User');
     }
-    public function answers()
+    public function question()
     {
-        return $this->hasMany('App\Answers');
+        return $this->belongsTo('App\Question');
     }
 }
