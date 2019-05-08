@@ -31,4 +31,9 @@ Route::patch('/question/{question_id}/answer/{answer_id}', 'AnswerController@upd
 Route::delete('/question/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answer.destroy');
 Route::resources([
     'question' => 'QuestionController',
+
+
 ]);
+
+Route::post('answer', array( 'before'=>'csfr','uses'=>'AnswerController@insert' ) );
+Route::post('answer/update', array( 'before'=>'csfr','uses'=>'AnswerController@update' ) );

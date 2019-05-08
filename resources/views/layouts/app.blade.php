@@ -8,10 +8,15 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Final') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/editable.js') }}"></script>
+    <script src="{{ asset('js/tags.js') }}"></script>
+    <script src="{{ asset('js/upvote.js') }}"></script>
+    <script src="{{asset('/plugins/jquery-upvote/jquery.upvote.js')}}"></script>
+    <link href="{{ asset('plugins/jquery-upvote/jquery.upvote.css') }}" rel="stylesheet"/>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -22,13 +27,13 @@
 </head>
 <body>
 <div id="app">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <nav class="navbar navbar-expand-md navbar-light navbar-Final">
         <div class="container">
 
 
             @guest
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Final') }}
                 </a>
             @else
                 <a class="navbar-brand" href="{{ route('home') }}">
