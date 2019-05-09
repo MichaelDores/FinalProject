@@ -18,11 +18,13 @@
                             Edit Answer
                         </a>
                         {{ Form::open(['url' => 'vote', 'class' => 'vote']) }}
-                        {{ Form::token() }}
                         <div class="upvote vote_answer" data-answer="{{$answer->id}}" data-uid="{{Auth::id()}}">
-                            <a class="btn btn-primary float-left" id="a-upvote"  class="upvote vote {{ $answer->user_id == Auth::id() ? 'vote_disabled' : '' }} {{ $answer->votes && $answer->votes->contains('user_id', Auth::id()) ? ($answer->votes->where('user_id', Auth::id())->first()->vote == 1 ? 'upvote-on' : null) : null}}" data-vote="1"></a>
-                            <span class="count" id="a-{{$answer->id}}"></span> <br>
-                            <a class="btn btn-primary float-left" id="a-downvote" class="downvote vote {{ $answer->user_id == Auth::id() ? 'vote_disabled' : '' }} {{ $answer->votes && $answer->votes->contains('user_id', Auth::id()) ? ($answer->votes->where('user_id', Auth::id())->first()->vote <= 0 ? 'downvote-on' : null) : null}}" data-vote="-1"></a>
+                            <button class="btn btn-primary float-left mr-2" id="a-upvote"  class="upvote vote {{ $answer->user_id == Auth::id() ? 'vote_enabled' : '' }}
+                            {{ $answer->votes && $answer->votes->contains('user_id', Auth::id()) ? ($answer->votes->where('user_id', Auth::id())->first()->vote == 1 ? 'upvote-on' : null) : null}}" data-vote="1"> Vote Up</button>
+                            <br>
+                            <br>
+                            <button class="btn btn-primary float-left mr-2" id="a-downvote" class="downvote vote {{ $answer->user_id == Auth::id() ? 'vote_enabled' : '' }}
+                            {{ $answer->votes && $answer->votes->contains('user_id', Auth::id()) ? ($answer->votes->where('user_id', Auth::id())->first()->vote <= 0 ? 'downvote-on' : null) : null}}" data-vote="-1">Vote Down</button>
                         </div>
                         {{ Form::close() }}
                     </div>

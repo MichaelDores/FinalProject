@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 class Vote extends Model
 {
     protected $events = [
-        'created' => VoteEvent::class,
-        'updated' => VoteEvent::class
+        'created' => Vote::class,
+        'updated' => Vote::class
     ];
     protected $fillable = [
         'user_id',

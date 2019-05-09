@@ -35,5 +35,4 @@ Route::resources([
 
 ]);
 
-Route::post('answer', array( 'before'=>'csfr','uses'=>'AnswerController@insert' ) );
-Route::post('answer/update', array( 'before'=>'csfr','uses'=>'AnswerController@update' ) );
+Route::post('vote/answer', array( 'before'=>'csfr','uses'=>'VoteController@vote_answer' ) );
