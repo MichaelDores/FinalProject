@@ -35,4 +35,5 @@ Route::resources([
 
 ]);
 
+Route::get('vote/answer','VoteController@index');
 Route::post('vote/answer', array( 'before'=>'csfr','uses'=>'VoteController@vote_answer' ) );

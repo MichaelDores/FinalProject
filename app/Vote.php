@@ -23,15 +23,7 @@ class Vote extends Model
     public function answer() {
         return $this->belongsTo('App\Answer');
     }
-    /**
-     * Insert/Update & Delete from votes table
-     * If identical previous/new vote destroy otherwise insert/update.
-     * @param $user_id
-     * @param $id - ID question/answer
-     * @param $vote - Integer of vote value
-     * @param $column - the vote table uses question_id or answer_id
-     * @return array
-     */
+
     public static function vote($user_id, $id, $vote, $column) {
         $voted = Vote::where('user_id', $user_id)->where($column, $id)->first();
         if (isset($voted->vote) && $voted->vote == $vote)  {

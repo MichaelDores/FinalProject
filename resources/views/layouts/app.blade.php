@@ -15,6 +15,8 @@
     <script src="{{ asset('js/editable.js') }}"></script>
     <script src="{{ asset('js/tags.js') }}"></script>
     <script src="{{ asset('js/upvote.js') }}"></script>
+
+    <!-- UpVote -->
     <script src="{{asset('/plugins/jquery-upvote/jquery.upvote.js')}}"></script>
     <link href="{{ asset('plugins/jquery-upvote/jquery.upvote.css') }}" rel="stylesheet"/>
 
