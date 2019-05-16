@@ -8,10 +8,10 @@ for the sake of site cleanliness.
 
 -As a member of this website, I would like to help other users by marking the answer that was most relevant.
 
--As a user of this site, I would appreciate the ability to vote on the accuracy of answers to improve site integrity
+-As a user of this site, I would appreciate the ability to vote on the accuracy of answers to improve site integrity.
 
 -As a user of this website, I would like to be able to identify the most accurate answers to questions, based 
-on a voting system,
+on a voting system.
 
 ##Epic 
 
